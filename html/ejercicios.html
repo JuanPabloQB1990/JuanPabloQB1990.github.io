@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ejercicios.css">
+    <!-- <link rel="stylesheet" href="css/all.min.css"> -->
+    <title>Ejercicios</title>
+</head>
+
+<body class="oscuro">
+    <header>
+        <ul class="menu">
+            <li><a href="../Portafolio.html">Portafolio</a></li>
+            <li><a href="./Contactame.html">Contáctame</a></li>
+            <li><a href="./Educacion.html">Educación</a></li>
+            <li><a href="./ejercicios.html">Ejercicios DOM</a></li>
+        </ul>
+    </header>
+
+    <input type="checkbox" class="off-canvas-btn">
+    <label class="off-canvas-burger"></label>
+    <nav class="off-canvas-menu">
+      <div class="off-canvas-menu-container">
+        <a href="../Portafolio.html" class="off-canvas-link">Portafolio</a>
+        <a href="./Contactame.html" class="off-canvas-link">Contáctame</a>
+        <a href="./Educacion.html" class="off-canvas-link">Educación</a>
+        <a href="./ejercicios.html" class="off-canvas-link">Ejercicios DOM</a>
+      </div>
+    </nav>
+
+    <div class="container-all">
+    <div class="container-circle" for="checkbox"></div>
+
+    <section class="container-menu">
+        <h1 id="index">Tabla de Contenido</h1>
+        <ul>
+            <li><a href="ejercicios.html#container1">Calculadora de longitud de Texto</a></li>
+            <li><a href="ejercicios.html#container2">Recorte de Texto</a></li>
+            <li><a href="ejercicios.html#container3">Convertir cadena de texto en Array</a></li>
+            <li><a href="ejercicios.html#container4">Repetir cadena de texto</a></li>
+            <li><a href="ejercicios.html#container5">Agregar texto con innerHTML</a></li>
+            <li><a href="ejercicios.html#container6">Invertir texto al reves</a></li>
+            <li><a href="ejercicios.html#container7">Contar palabras repetidas</a></li>
+            <li><a href="ejercicios.html#container8">Verifica si la palabra es Polindrona</a></li>
+            <li><a href="ejercicios.html#container9">Trabajar con Arrays</a></li>
+            <li><a href="ejercicios.html#container10">Trabajar con Objetos</a></li>
+        </ul>
+    </section>
+
+    <section class="container" id="container1">
+        <h2>Calculadora de longitud de Texto</h2>
+        <textarea id="textArea" cols="40" rows="10" placeholder="ingresa el texto aqui"></textarea>
+        <h2>Longitud de Texto:</h2>
+        <div id="mostrarTexto1"></div><br>
+        <a href="ejercicios.html#index">Tabla de Contenido ☝️</a>
+    </section>
+    <section class="container" id="container2">
+        <h2>Recorte de Texto</h2>
+        <textarea id="textArea2" cols="40" rows="10" placeholder="ingrese texto a recortar aqui"></textarea><br>
+        <input type="number" id="indice1" placeholder="ingrese indice #1">
+        <input type="number" id="indice2" placeholder="ingrese indice #2">
+        <button onclick="botonRecorte()">recortar</button><br>
+        <h2>texto recortado:</h2>
+        <div id="mostrarTexto2"></div><br>
+        <a href="ejercicios.html#index">Tabla de Contenido ☝️</a>
+    </section>
+    <section class="container" id="container3">
+        <h2>Convierte la palabra o Texto en array y separala con lo que quieras  </h2>
+        <textarea id="textArea3" cols="40" rows="10" placeholder="ingrese palabra o texto aqui"></textarea><br>
+        <input type="text" id="indiceDiv" placeholder="ingrese caracter">
+        <button onclick="botonDivWord()">palabra</button>
+        <button onclick="botonDivText()">texto</button><br>
+        <h2>texto dividido:</h2>
+        <div id="mostrarTexto3"></div><br>
+        <a href="ejercicios.html#index">Tabla de Contenido ☝️</a>
+    </section>
+
+    <section class="container" id="container4">
+        <h2>Repetir cadena de texto </h2>
+        <textarea id="textArea4" cols="40" rows="10"
+            placeholder="ingrese texto que desea repetir"></textarea><br>
+        <input type="number" id="indiceRepetir" placeholder="# de repeticiones">
+        <button onclick="botonRep()">repetir</button><br>
+        <h2>texto repetido:</h2>
+        <div id="mostrarTexto4"></div><br>
+        <a href="ejercicios.html#index">Tabla de Contenido ☝️</a>
+    </section>
+
+    <section class="container" id="container5">
+        <h2>Como agregar texto con innerHTML</h2>
+        <input id="txtCambiar" type="text" placeholder="Ingrese texto">
+        <input id="txtCambiar2" type="text" placeholder="Ingrese texto">
+        <button onclick="btncambiar()">cambiar texto</button>
+        <h2>Texto:</h2>
+        <div id="mostrarTexto5"></div><br>
+        <a href="ejercicios.html#index">Tabla de Contenido ☝️</a>
+    </section>
+
+    <section class="container" id="container6">
+        <h2>Ingrese el texto que desea invertir</h2>
+        <textarea id="textArea5" cols="40" rows="10" placeholder="ingrese texto aqui"></textarea><br>
+        <button onclick="btnInvertir()">Invertir</button><br>
+        <h2>Texto invertido:</h2>
+        <div id="mostrarTexto6"></div>
+        <a href="ejercicios.html#index">Tabla de Contenido ☝️</a>
+    </section>
+
+    <section class="container" id="container7">
+        <h2>Contar palabras repetidas del texto</h2>
+        <textarea name="textoarea6" class=" textArea6" cols="40" rows="10" placeholder="ingrese texto aqui"></textarea><br>
+        <input type="text" name="palabreaRepeat" class="wordRepeat" placeholder="ingrese palabra">
+        <button onclick="contarRepeticiones()">Contar</button><br><br>
+        <h2># de repeticiones:</h2>
+        <div id="mostrarTexto7"></div>
+        <a href="ejercicios.html#index">Tabla de Contenido ☝️</a>
+    </section>
+
+    <section class="container" id="container8">
+        <h2>Verificar si una palabra es Polindrona</h2>
+        <input type="text" class="textArea7" placeholder="ingrese palabra">
+        <button onclick="btnVerificar()">verificar</button><br><br>
+        <div id="mostrarTexto8"></div>
+        <a href="ejercicios.html#index">Tabla de Contenido ☝️</a>
+    </section>
+    <section class="container" id="container9">
+        <section class="input-arrays">
+            <h2>Trabajando con Arrays</h2>
+            <input type="text" class="nombrePosition" Placeholder="ingrese fruta existente"><br>
+            <input type="number" class="numberDelete" Placeholder="# de elem. a eliminar" style="background-color:yellow"><br>
+            <input type="text" class="textArea8" Placeholder="ingrese fruta nueva"><br>
+            <label for="">Posicion:</label>
+            <select name="position" id="position">
+                <option value="first">Primera</option>
+                <option value="last">Ultima</option>
+            </select><br>
+            <button onclick="btnAgregar()">Agregar</button><br>
+            <button onclick="btnEliminar()">Eliminar</button><br>
+            <button onclick="agregarPosicion()">Agregar por posicion</button><br>
+            <button onclick="ordenarArray()">Ordenar alfabeticamente</button><br>
+            <a href="ejercicios.html#index">Tabla de Contenido ☝️</a>
+        </section>
+        <section class="content-arrays">
+            <article class="arrays">
+                <h2>Frutas</h2>
+                <div class="array1"></div>
+            
+            </article>
+        </section>
+    </section>
+    <section class="container" id="container10">
+        <form class="form-objetos" action="">
+            <h2>Trabajando con Objetos</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre"><br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido"><br>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad"><br>
+            <button id="crearObjeto">Crear</button><br>
+            <label for="">Organizar por:</label>
+            <select name="ordenar" id="ordenar">
+                <option value="nombre">Nombre</option>
+                <option value="apellido">Apellido</option>
+                <option value="edad">Edad</option>
+            </select><br>
+            <button id="menorMayor">menor a mayor</button>
+            <button id="mayorMenor">mayor a menor</button><br>
+            <a href="ejercicios.html#index">Tabla de Contenido ☝️</a>
+        </form>
+            <article id="container-tabla-objeto">
+                <h2>Usuarios</h2>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Edad</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+            </article>
+            <template id="template">
+                <tr>
+                    <td class="name"></td>
+                    <td class="apellido"></td>
+                    <td class="edad"></td>
+                </tr>
+            </template>
+            
+    </section>
+    
+    <script src="../javascript/ejercicios.js"></script>
+</body>
+
+</html>
