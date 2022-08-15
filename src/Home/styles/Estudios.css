@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.font-estudios{
+    background-image: url("../img/fondo-contact.jpg");
+    background-size: cover;
+    background-position: center center;
+    width: 100vw;
+    height: 2800px;
+}
+
+.container-edu{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+}
+
+.certificados {
+    position: relative;
+    height: 420px;
+    width: 450px;
+    margin: 2rem 2rem;
+}
+
+.certificados img{
+    height: 350px;
+    width: 450px;
+    transition: transform 1s ease-in-out;
+}
+
+.certificados img:hover{
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+}
+
+@media (max-width: 515px) {
+    .certificados {
+        height: 300px;
+        width: 330px;
+        margin-top:10rem;
+    }
+
+    .certificados img{
+        height: 370px;
+        width: 330px;
+    }
+}
+
