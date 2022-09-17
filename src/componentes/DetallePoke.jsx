@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import {PokeDetalleAccion} from '../redux/pokeDucks'
 import "../Home/styles/DetallePoke.css"
 import {useEffect} from 'react'
+import StatsPoke from './StatsPoke'
 
 const DetallePoke = () => {
 
@@ -33,7 +34,7 @@ const DetallePoke = () => {
                         <div className="estadisticas">
                             <h5>
                                 {pokemon.estadisticas.map((el,index)=>{
-                                    return (<p key={index}>{el.stat.name}: {el.base_stat}</p>)
+                                    return <StatsPoke key={index} data={el}/>
                                 })}
                             </h5>
                         </div>

@@ -1,19 +1,11 @@
-import React from 'react'
 import "./styles/Portafolio.css"
 import imagenFondo from "./img/52743.jpg"
 import foto from "./img/Foto.jpg"
 import imagen1 from "./img/imagen1.jpg"
 import imagen2 from "./img/pokeapi.jpg"
 import imagen3 from "./img/React.png"
-import habilidades from "./img/habilidaes.jpg"
-import htmlFoto from "./logos/html.png"
-import cssFoto from "./logos/css.png"
-import javascriptFoto from "./logos/javascript.jpg"
-import reactFoto from "./logos/react.png"
-import bootstrapFoto from "./logos/bootstrap.png"
-import sassFoto from "./logos/Sass.png"
-import phpFoto from "./logos/php.jpg"
-import mysqlFoto from "./logos/MySQL.png"
+
+
 
 function mostrarScroll(){
         let card = document.querySelectorAll(".animado");
@@ -98,8 +90,8 @@ return (
         </figure>
     </section>
     <section className="slide briefcase">
-        <h2 className="title">Proyectos</h2>
-        <div className="container__card">
+        <h2 className="title_briefcase">Proyectos</h2>
+        <div className="container__card animado">
             <div className="card__father">
                 <div className="card ">
                     <div className="card__front" style={{backgroundImage: `url(${imagen1})`}}>
@@ -147,7 +139,7 @@ return (
                     <div className="card__back" style={{backgroundColor: '#00BFFF'}}>
                         <div className="body__card_back">
                             <h1>Codigo React</h1>
-                            <p>haz click en este link y podras ver el codigo del proyecto hecho con la libreria de React.</p>
+                            <p>haz click en este link y podras ver el codigo de este Portafolio hecho con la libreria de React.</p>
                             <a href="https://github.com/JuanPabloQB1990/CrudFetch" rel="noreferrer" target="_blank">Github</a>
                         </div>
                     </div>
@@ -156,53 +148,8 @@ return (
 
         </div>
     </section>
-        <section className="slide aboutMe">
-            <h2 className="title">Acerca de mi</h2>
-            <figure className="card-image">
-                <img src={habilidades} alt="foto"/>
-            </figure>
-            <p className="animado">Mi nombre es Juan Pablo Quintero, actualmente cursando la carrera tecnológica de Análisis y Desarrollo de Sistemas de Información, con un gran deseo y anhelo de iniciarme en esta gran artistica y maravillosa carrera. Me caracterizo por grandes capacidades de resolución en problemas dentro del área en que me desempeño. Soy una persona Proactiva y Comprometida con los deberes asignados, responsable, puntual, creativa y con muy buena disposición para cualquier tarea que se me asigne. Laboralmente me he destacado como Técnico en Mantenimiento de PC y tengo 4 años de experiencia este campo.</p>
-            <a download="hoja-de-vida" href="./Hoja de vida 2022.pdf"><button className="btn-cv"type="submit">Descarga mi CV</button></a>
-        </section>
+        
 
-        <section className="slide skills">
-            <h2 className="title">Habildades</h2>
-            <p>Mis actuales habilidades como desarrollador en formación son en el lado del Frontend, cuento con certificados de UdeMY nivel avanzado en HTML5, CSS, JavaScript y React</p>
-            <figure className="images">
-                <div className="logos">
-                    <img src={htmlFoto} alt="foto"/>
-                    <p>HTML</p>
-                </div>
-                <div className="logos">
-                    <img src={cssFoto} alt="foto"/>
-                    <p>CSS</p>
-                </div>
-                <div className="logos">
-                    <img src={javascriptFoto} alt="foto"/>
-                <p>JavaScript</p>
-                </div>
-                <div className="logos">
-                    <img src={reactFoto} alt="foto"/>
-                <p>React</p>
-                </div>
-                <div className="logos">
-                    <img src={bootstrapFoto} alt="foto"/>
-                    <p>Bootstrap</p>
-                </div>
-                <div className="logos">
-                    <img src={sassFoto} alt="foto"/>
-                    <p>Sass</p>
-                </div>
-                <div className="logos">
-                    <img src={phpFoto} alt="foto"/>
-                    <p>PHP</p>
-                </div>
-                <div className="logos">
-                    <img src={mysqlFoto} alt="foto"/>
-                    <p>MySQL</p>
-                </div>
-            </figure>
-        </section>
         <section className="slide footer">
             <h2 className="title">Encuentrame también aquí</h2>
             <div className="icons">

@@ -17,6 +17,8 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
+import Skills from './componentes/Skills';
+import AboutMe from './componentes/AboutMe';
 
 
 function App() {
@@ -67,9 +69,8 @@ function App() {
               <Contactame/>
             </Route>
             <Route component={Estudios} path="/estudios"/>
-          <Route path="/" exact>
-            inicio...
-          </Route>
+            <Route component={Skills} path="/skills"/>
+            <Route component={AboutMe} path="/aboutMe"/>
           <Provider path="/login" store={store}>
             <Login/>
           </Provider>

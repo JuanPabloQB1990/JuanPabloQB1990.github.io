@@ -35,9 +35,9 @@ return (
                     <NavDropdown title="Portafolio" id="collasible-nav-dropdown">
                       <NavDropdown.Item href="/portafolio">Portafolio</NavDropdown.Item>
                       <NavDropdown.Item href="/estudios">Estudios</NavDropdown.Item>
-                      <NavDropdown.Item href="/pokemons">Pokemons</NavDropdown.Item>
+                      <NavDropdown.Item href="/skills">Habilidades</NavDropdown.Item>
                       <NavDropdown.Divider />
-                      <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                      <NavDropdown.Item href="/aboutMe">Acerca de Mi</NavDropdown.Item>
                     </NavDropdown>
                   </>
                 ) : null

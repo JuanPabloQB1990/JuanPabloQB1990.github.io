@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import {db} from "../firebase"
-
 import moment from 'moment'
 import 'moment/locale/es'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Firestore = (props) => {
 
@@ -104,6 +105,16 @@ const agregarTarea = async(e) => {
     setTareas([...tareas, {...nuevaTarea, id: data.id}])
     setTarea("")
 
+    toast.success('👍 Tarea agregada ✔', {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+
   } catch (error) {
       console.log(error)
   }
@@ -115,6 +126,16 @@ const eliminarTarea = async (id) => {
         await db.collection(props.user.uid).doc(id).delete()
         const arrayFiltrado = tareas.filter(item => item.id !== id)
         setTareas(arrayFiltrado)
+
+        toast.error('Tarea eliminada', {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
 
   } catch (error) {
     console.log(error)
@@ -149,6 +170,16 @@ const editarTarea = async(e) => {
       seteModoEdicion(false)
       setTarea("")
       setId("")
+
+      toast.warn('✔ Tarea Editada ✔', {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
 
   } catch (error) {
     console.log(error)
@@ -198,6 +229,7 @@ const editarTarea = async(e) => {
             className={modoEdicion ? "btn btn-warning w-100" : "btn btn-primary w-100"}
             type="submit"
             >{modoEdicion ? "Editar" : "Agregar"}</button>
+            <ToastContainer />
             
           </form>
         </div>
