@@ -64,28 +64,18 @@ function App() {
       </Provider>
         
         
-          <Switch>
-            <Route path="/contactame">
-              <Contactame/>
-            </Route>
-            <Route component={Estudios} path="/estudios"/>
-            <Route component={Skills} path="/skills"/>
-            <Route component={AboutMe} path="/aboutMe"/>
-          <Provider path="/login" store={store}>
-            <Login/>
-          </Provider>
-          <Route path="/admin">
-            <Admin />
-          </Route>
-          <Route path="/reset">
-            <Reset />
-          </Route>
+        <Switch>
+          <Route exact path="/login" component={Login} store={store}/>
+          <Route path="/contactame" component={Contactame}/>
+          <Route component={Estudios} path="/estudios"/>
+          <Route component={Skills} path="/skills"/>
+          <Route component={AboutMe} path="/aboutMe"/>
+          <Route path="/admin" component={Admin}/>
+          <Route path="/reset" component={Reset}/>
+          
           <RutaPrivada component={Portafolio} path="/portafolio" />
           <div className="container mt-3">
-          <Provider store={store}>
-            <Pokemones/>
-          </Provider>
-
+            <RutaPrivada path="/pokemones" component={Pokemones} store={store}/>
           </div>
         </Switch>
       </div>
