@@ -24,7 +24,7 @@ return (
     <>
       <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" sticky="top">
         
-          <Navbar.Brand href="/login">Portafolio</Navbar.Brand>
+          <Navbar.Brand href="/portafolio">Portafolio</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav >

@@ -59,33 +59,26 @@ function App() {
     
     <Router>
       <div>
-      <Provider store={store}>
-          <NavBar firebaseUser={firebaseUser}/>
-      </Provider>
+        <Provider store={store}>
+            <NavBar firebaseUser={firebaseUser}/>
+        </Provider>
         
         
-          <Switch>
-            <Route path="/contactame">
-              <Contactame/>
-            </Route>
+        <Switch>
+            <Route component={Contactame} path="/contactame"/>
             <Route component={Estudios} path="/estudios"/>
             <Route component={Skills} path="/skills"/>
             <Route component={AboutMe} path="/aboutMe"/>
           <Provider path="/login" store={store}>
-            <Login/>
+            <Route component={Login} path="/login"/>
           </Provider>
-          <Route path="/admin">
-            <Admin />
-          </Route>
-          <Route path="/reset">
-            <Reset />
-          </Route>
+          <RutaPrivada component={Admin} path="/admin"/>
+          <Route component={Reset} path="/reset"/>
           <RutaPrivada component={Portafolio} path="/portafolio" />
           <div className="container mt-3">
-          <Provider store={store}>
-            <Pokemones/>
-          </Provider>
-
+            <Provider store={store}>
+              <RutaPrivada component={Pokemones} path="/pokemones"/>
+            </Provider>
           </div>
         </Switch>
       </div>

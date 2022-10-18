@@ -140,7 +140,7 @@ return (
                         <div className="body__card_back">
                             <h1>Codigo React</h1>
                             <p>haz click en este link y podras ver el codigo de este Portafolio hecho con la libreria de React.</p>
-                            <a href="https://github.com/JuanPabloQB1990/CrudFetch" rel="noreferrer" target="_blank">Github</a>
+                            <a href="https://github.com/JuanPabloQB1990/JuanPabloQB1990.github.io" rel="noreferrer" target="_blank">Github</a>
                         </div>
                     </div>
                 </div>
